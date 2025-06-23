@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return res.json()
             })
             .then((data) => {
+                console.log(data)
                 cardRender(data)
             })
             .catch((err) => {
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         data.forEach(item => {
             const article = document.createElement("article")
             article.classList.add("card__block")
+            article.classList.add("card__scale")
             article.setAttribute("data-aos", "fade-up")
             article.innerHTML = `
                  <div class="card__img">

@@ -11,6 +11,11 @@
 		border: 3px solid #fff;
 		overflow: hidden;
 		padding: 10px 0 0 0;
+		box-shadow: 0 3px 20px #ffffff44;
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 3px 20px #ffffff66;
+		}
 	}
 	&__img {
 		img {
