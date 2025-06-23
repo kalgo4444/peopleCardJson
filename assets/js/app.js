@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((data) => {
                 console.log(data)
                 cardRender(data)
+                find(data)
             })
             .catch((err) => {
                 console.error(err)
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarLinkEl.forEach((link) => {
         link.addEventListener("click", (e) => {
             e.preventDefault()
+            collectionEl.classList.remove("show")
         })
     })
 
@@ -70,5 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
             fragment.appendChild(article)
         })
         cardWrapperEl.appendChild(fragment)
+    }
+
+    function find(data) {
+        navbarSearchEl.addEventListener("input", (e) => {
+            let userInput = e.target.value
+            if (!userInput) {
+                cardRender(data)
+            } else {
+                let findUser = data.filter((item) => item.username.toLowerCase().includes(userInput.toLowerCase()))
+                cardRender(findUser)
+            }
+        })
     }
 })
