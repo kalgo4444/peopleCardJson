@@ -1,0 +1,16 @@
+{
+	"name": "peoplecardjson",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"sass:compiler": "sass --style=compressed assets/sass/main.scss:assets/css/style.min.css -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"sass": "^1.89.2"
+	}
+}
