@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error(err)
             })
             .finally(() => {
+                console.info("Done")
                 loader.style.display = "none"
             })
     }
